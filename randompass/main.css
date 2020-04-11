@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e272e;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out
+}
+
+#title {
+  font-size: 28px;
+  color: #fff;
+  border: 3px solid #DFE4EA;
+  padding: .2em;
+  border-radius: 5px;
+  background-color: #D9534F;
+  text-align: center;
+  margin-top: 0;
+}
+
+#wrapper {
+  position: relative;
+}
+
+aside {
+  width: 33.5%;
+  position: absolute;
+  height: 85vh;
+  right: 0;
+}
+
+#instructions {
+  border: 2px solid gray;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #2f3542;
+  background-color: #f1f2f6;
+  max-height: 55px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out
+}
+
+#instructions.active {
+  height: auto;
+  max-height: 500px;
+}
+
+#instructions__header {
+  padding: 1em;
+  cursor: pointer;
+  border-bottom: 1px solid #2f3542;
+  display: flex;
+  justify-content: space-between;
+}
+
+#instructions__content {
+  padding: 0 2em 1em 2em;
+}
+
+#instructions__content ul {
+  padding: 0;
+}
+
+#how {
+  margin: 0;
+}
+
+#instructions li {
+  margin-bottom: 1em
+}
+
+main {
+  width: 65%;
+}
+
+main div {
+  margin: 0.5em 0;
+}
+
+#password-length {
+  width: 5em;
+  padding: .2rem;
+  text-align: center;
+  font-size: .8em;
+  border: none;
+  border-radius: 5px;
+}
+
+.button{
+  font-size: 1rem;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.button.generate {
+  background-color: #D9534F;
+  color: #fff;
+}
+.button.generate:hover{
+  background-color: #000;
+}
+.button.copy {
+  background-color: #D9534F;
+  color: white;
+}
+.button.copy:hover{
+  background-color: #000;
+}
+
+#random-password-container {
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: #dfe4ea;
+  padding: 1em;
+}
+
+#random-password {
+  background-color: #D9534F;
+  padding: 1em;
+  word-break: break-all;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#error-message{
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  color: #D8000C;
+}
+
+#password-strength-container {
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: #dfe4ea;
+  padding: 1em;
+}
+
+#password-strength-container .input-container {
+  position: relative;
+}
+
+#password-test {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 0.5em;
+  outline: none;
+}
+
+#password-indicator {
+  width: 100%;
+  padding: 2px;
+  border-radius: 5px;
+  background: white;
+}
+
+#password-indicator.weak {
+  background: linear-gradient(to right, #ff0000 25%, #fff 25%);
+}
+
+#password-indicator.average {
+  background: linear-gradient(to right,#ff9900 50%,#fff 50%);
+}
+
+#password-indicator.good {
+  background: linear-gradient(to right,#70A1FF 75%, #fff 75%);
+}
+
+#password-indicator.strong {
+  background: linear-gradient(to right, #43f04c 100%, #43f04c 100%);
+}
+
+#password-toggle {
+  font-size: .8em;
+  float: right;
+  position: absolute;
+  right: 0.5em;
+  top: 0.75em;
+  color: #70A1FF;
+  cursor: pointer;
+}
+
+@keyframes octocat-wave {
+	0%, 100% {
+		transform:rotate(0)
+	}
+	20%, 60% {
+		transform:rotate(-25deg)
+	}
+	40%, 80% {
+		transform:rotate(10deg)
+	}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@media only screen and (max-width: 768px) {
+	aside {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+}
