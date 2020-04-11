@@ -497,24 +497,13 @@
 				manual();
 			}
 			function bro(){
-				namaku = $(".pengembang").text();
-			    var hex, i;
-
-			    var result = "";
-			    for (i=0; i<namaku.length; i++) {
-			        hex = namaku.charCodeAt(i).toString(16);
-			        result += ("000"+hex).slice(-4);
-			    }
-				if (result="0041006e00640069006b0061002000530075006a0061006e006100640069"){
-					$('body').fadeOut();
-				}
 			}
 			function specialEffects(){
 				if(localStorage.getItem("manualColor")=="#4c1130"){
-					setTimeout(function() { createNote("Mangat Din ngepush course javascriptnya :v"); }, 5000);
+					setTimeout(function() { createNote("Semangat Vi :v"); }, 5000);
 				}
 				else if(localStorage.getItem("manualColor")=="#000000"){
-					setTimeout(function() { createNote("Buat belajar bro, bukan buat neko neko :v"); }, 5000);
+					setTimeout(function() { createNote("Jadian yuk?"); }, 5000);
 				}
 			}
 			function createNote(isi){
